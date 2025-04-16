@@ -1,0 +1,6 @@
+// This is a server component- Next.js has all components server by default
+
+export const Greet = () => {
+    console.log("Greet component");
+    return <h1>Greet Component</h1>
+}
