@@ -13,6 +13,7 @@ export default async function MockUsers() {
 
     async function addUser(formData: FormData) {
         "use server"
+        // use server above allows us to use api keys on the server
         const name = formData.get("name");
         const res = await fetch ("https://67ffda88b72e9cfaf72618b2.mockapi.io/users",
             {
