@@ -2,6 +2,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { SignInButton, UserButton, SignedIn, SignedOut } from '@clerk/nextjs'
 
 export default function Navigation() {
 
@@ -21,6 +22,12 @@ export default function Navigation() {
       <Link href={"/products/iphone"} className={pathname === "/products/iphone" ? "font-bold mr-4" : "text-blue-500 mr-4"}>
         Iphones
       </Link>
+      <SignedOut>
+        <SignInButton mode="modal" />
+      </SignedOut>
+      <SignedIn>
+        <UserButton />
+      </SignedIn>
     </nav>
   )
 }
